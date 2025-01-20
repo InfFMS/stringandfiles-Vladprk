@@ -3,3 +3,12 @@
 # Слова во всех предложениях должны быть приведены к верхнему регистру.
 # Между словами вместо пробела ставится символ "_".
 # После записи откройте этот файл, считайте содержимое и выведите его на экран.
+new_f = open('new_file_for_task_4.txt', 'w', encoding='utf-8')
+print('Введите текст:')
+txt = input()
+new_txt = (txt.replace(' ', '_')).upper()
+new_f.write(new_txt)
+new_f.close()
+new_f = open('new_file_for_task_4.txt', 'r', encoding='utf-8')
+txt_for_print = new_f.read()
+print(f'Введённый текст: {txt_for_print}')

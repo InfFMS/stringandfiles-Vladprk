@@ -3,3 +3,10 @@
 # Найдите и замените все вхождения слова "Python" на слово "Питон" (регистр учитывать).
 # Запишите обновленный текст в новый файл с другим именем.
 # Выведите на экран сообщение о количестве произведённых замен.
+f = open('task2.txt', 'r', encoding='utf-8')
+a = f.read()
+new_a = a.replace('Python', "Питон")
+new_f = open('new_file_for_task_2.txt', 'w', encoding='utf-8')
+new_f.write(str(new_a))
+f.close()
+new_f.close()
